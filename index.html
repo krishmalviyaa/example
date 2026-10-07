@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deskhaus – Desk &amp; Workspace Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="#" class="logo">Deskhaus</a>
+    <input type="search" id="search" placeholder="Search products" aria-label="Search products">
+    <button id="cart-toggle" class="cart-btn" aria-label="Open cart">
+      Cart <span id="cart-count">0</span>
+    </button>
+  </header>
+
+  <section class="hero">
+    <h1>Build a desk you want to sit at.</h1>
+    <p>Keyboards, lamps, and everyday gear for people who work at a screen all day.</p>
+    <a href="#shop" class="btn">Shop all products</a>
+  </section>
+
+  <main id="shop" class="shop">
+    <div class="controls">
+      <div id="filters" class="filters" role="group" aria-label="Filter by category"></div>
+      <label class="sort">Sort by
+        <select id="sort">
+          <option value="default">Featured</option>
+          <option value="low">Price: low to high</option>
+          <option value="high">Price: high to low</option>
+        </select>
+      </label>
+    </div>
+    <div id="product-grid" class="grid"></div>
+    <p id="empty" class="empty" hidden>No products match your search. Try a different word or category.</p>
+  </main>
+
+  <aside id="cart" class="cart" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-head">
+      <h2>Your cart</h2>
+      <button id="cart-close" aria-label="Close cart">&times;</button>
+    </div>
+    <ul id="cart-items" class="cart-items"></ul>
+    <div class="cart-foot">
+      <div class="total"><span>Total</span><strong id="cart-total">₹0</strong></div>
+      <button id="checkout" class="btn full">Place order</button>
+    </div>
+  </aside>
+  <div id="overlay" class="overlay" hidden></div>
+  <div id="toast" class="toast" role="status"></div>
+
+  <footer class="footer">© 2026 Deskhaus. Demo store for a Jenkins CI/CD project.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
